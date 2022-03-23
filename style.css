@@ -1,0 +1,391 @@
+:root {
+  --title: 'Ubuntu', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 3rem;
+
+  align-items: center;
+
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+
+  z-index: 3;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*---------- HEADER ----------*/
+.navigation {
+  margin-left: 4rem;
+  display: flex;
+  white-space: nowrap;
+}
+
+.navigation a {
+  margin: 1rem;
+  font-family: var(--title);
+}
+
+.social-media a {
+  margin: 0.5rem;
+}
+
+.social-media {
+  margin-left: 50vw;
+  font-size: 170%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.toggle-mode {
+  height: 26px;
+  width: 80px;
+  margin-top: -0.13rem;
+
+  padding: 0 10px;
+
+  border: solid 2.5px #000;
+  border-radius: 3px;
+  background: transparent;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  font-family: var(--title);
+  color: #000;
+}
+
+.toggle-mode i {
+  margin-right: 0.5rem;
+}
+
+/*---------- MAIN ----------*/
+
+/*------ HOME ------*/
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+#home h1,
+h2 {
+  font-family: var(--title);
+  font-weight: 500;
+}
+
+#home h1 {
+  font-size: 300%;
+  margin-left: 4.9rem;
+  margin-bottom: 0.5rem;
+}
+
+#home h2 {
+  color: rgb(31, 0, 145);
+  margin-left: 5rem;
+}
+
+/*------ ABOUT ------*/
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#about h1,
+p {
+  font-family: var(--title);
+  font-weight: 500;
+}
+
+#about h1 {
+  margin-top: -10rem;
+  margin-bottom: 0.8rem;
+  margin-left: 4.9rem;
+}
+
+#about p {
+  color: rgb(31, 0, 145);
+  font-size: 118%;
+}
+
+.about-me {
+  margin-left: 5.2rem;
+  max-width: 50vw;
+}
+
+/*------ CONTACT ------*/
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#contact h1,
+p {
+  font-family: var(--title);
+  font-weight: 500;
+}
+
+#contact h1 {
+  margin-top: -10rem;
+  margin-bottom: 0.8rem;
+  margin-left: 4.9rem;
+}
+
+#contact p,
+#contact a {
+  color: rgb(31, 0, 145);
+  font-size: 120%;
+  font-family: var(--title);
+
+  margin-bottom: 1rem;
+}
+
+.contact-me {
+  margin-left: 5.2rem;
+  max-width: 50vw;
+}
+
+.contact-me i {
+  margin-right: 1rem;
+}
+
+.contact-mobile {
+  display: none;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+/*---------- FOOTER ----------*/
+
+footer {
+  position: fixed;
+  margin-top: 35rem;
+  width: 200vw;
+  height: 40vh;
+}
+
+.footer-waves {
+  position: relative;
+  text-align: center;
+
+  color: white;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*---------- DARK MODE ----------*/
+
+.body.dark {
+  background-color: #132742;
+}
+
+/*------ HEADER ------*/
+
+.nav-bar.dark {
+  background: #132742;
+  box-shadow: 20px 20px 60px #102138, -20px -20px 60px #162d4c;
+}
+
+.nav-bar.dark a {
+  color: #fff;
+}
+
+.toggle-mode.dark {
+  border: solid 2.5px #fff;
+  color: #fff;
+}
+
+/*------ MAIN ------*/
+
+#home.dark h1,
+#home.dark h2 {
+  color: #fff;
+}
+
+#about.dark h1,
+#about.dark p {
+  color: #fff;
+}
+
+#contact.dark h1,
+#contact.dark a,
+#contact.dark p {
+  color: #fff;
+}
+
+/*---------- RESPONSIVE ----------*/
+
+@media (max-width: 768px) {
+  .waves {
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1310px) {
+  .social-media {
+    margin-left: 45vw;
+  }
+}
+
+@media (max-width: 1190px) {
+  .social-media {
+    margin-left: 35vw;
+  }
+}
+
+@media (max-width: 1090px) {
+  .social-media {
+    margin-left: 25vw;
+  }
+}
+
+@media (max-width: 870px) {
+  .social-media {
+    margin-left: 15vw;
+  }
+}
+
+@media (max-width: 770px) {
+  .social-media {
+    margin-left: 10vw;
+  }
+}
+
+@media (max-width: 725px) {
+  .social-media {
+    display: none;
+  }
+
+  .contact-mobile {
+    display: flex;
+  }
+
+  #contact p,
+  #contact a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .toggle-mode {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .navigation {
+    margin-left: 1rem;
+  }
+
+  .navigation a {
+    font-size: 10px;
+  }
+
+  #home h1 {
+    font-size: 30px;
+  }
+
+  #home h2 {
+    font-size: 18px;
+  }
+
+  .toggle-mode {
+    font-size: 10px;
+    width: 60px;
+    padding: 0;
+  }
+
+  footer {
+    margin-top: 42rem;
+  }
+}
